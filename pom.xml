@@ -23,4 +23,11 @@
   		</plugin>
   	</plugins>
   </build>
+  <dependencies>
+  	<dependency>
+  		<groupId>org.openjfx</groupId>
+  		<artifactId>javafx-graphics</artifactId>
+  		<version>19</version>
+  	</dependency>
+  </dependencies>
 </project>
