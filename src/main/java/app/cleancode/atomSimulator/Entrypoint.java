@@ -22,16 +22,10 @@ public class Entrypoint extends Application {
     primaryStage.setTitle("Atoms");
     primaryStage.setFullScreen(true);
     Screen screen = Screen.getPrimary();
-    Canvas screenCanvas = new Canvas(screen.getBounds().getWidth() * 2, screen.getBounds().getHeight() * 2);
-    screenCanvas.setScaleX(1/2d);
-    screenCanvas.setScaleY(1/2d);
+    Canvas screenCanvas = new Canvas(screen.getBounds().getWidth(), screen.getBounds().getHeight());
     Arena  arena = new Arena(screenCanvas);
     Group root = new Group(screenCanvas);
     Scene scene = new Scene(root);
-    Camera camera = new PerspectiveCamera();
-    camera.setTranslateX(screenCanvas.getBoundsInParent().getMinX());
-    camera.setTranslateY(screenCanvas.getBoundsInParent().getMinY());
-    scene.setCamera(camera);
     primaryStage.setScene(scene);
     primaryStage.show();
     new AnimationTimer() {
